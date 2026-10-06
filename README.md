@@ -361,6 +361,10 @@ OpenAI SDK (trỏ sang endpoint tương thích của Gemini), psycopg 3
 
 **Frontend:** React 18, React Router 6, Vite 5, Tailwind CSS 4
 
+---
+
+## 13 Demo
+
 [![Demo System Video](https://img.youtube.com/vi/CoX7NPkcJwU/hqdefault.jpg)](https://www.youtube.com/watch?v=CoX7NPkcJwU)
 
 
