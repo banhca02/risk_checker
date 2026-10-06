@@ -1,0 +1,91 @@
+--- PAGE 1 ---
+Synthetic sample - for technical assessment only
+Page 1
+AI ENGINEER FRESHER - TECHNICAL ASSIGNMENT
+Import Document Risk Checker
+Thời gian thực hiện: 01 ngày
+Bối cảnh
+Trong hoạt động xuất nhập khẩu, một lô hàng thường đi kèm nhiều loại chứng từ khác nhau. Trong
+bài test này, một bộ chứng từ có thể bao gồm:
+• Commercial Invoice
+• Packing List
+• Bill of Lading
+Trước khi sử dụng bộ chứng từ cho các bước nghiệp vụ tiếp theo, nhân viên cần kiểm tra thông tin trên
+từng chứng từ và tính nhất quán của toàn bộ bộ hồ sơ. Việc kiểm tra thủ công có thể mất nhiều thời
+gian và dễ bỏ sót sai lệch.
+Yêu cầu
+Xây dựng một hệ thống sử dụng AI hỗ trợ nhân viên xuất nhập khẩu đọc và kiểm tra một bộ chứng từ
+của lô hàng.
+• Upload các chứng từ của một lô hàng.
+• Nhận biết và xử lý các loại chứng từ.
+• Trích xuất các thông tin cần thiết.
+• Hiển thị dữ liệu đã trích xuất.
+• Kiểm tra tính nhất quán giữa các chứng từ.
+• Phát hiện các thông tin thiếu, sai hoặc có dấu hiệu bất thường.
+• Cho biết kết quả kiểm tra và vị trí/nội dung liên quan đến vấn đề được phát hiện.
+• Lưu lại các bộ chứng từ đã xử lý.
+• Xem lại kết quả của các lần xử lý trước.
+Chứng từ có thể:
+• Là PDF hoặc hình ảnh.
+• Có nhiều trang.
+• Có nhiều mặt hàng.
+• Có cách trình bày khác nhau.
+• Có một số thông tin không xuất hiện trên tất cả chứng từ.
+Technical Requirements
+Hạng mục
+Yêu cầu
+Backend
+Python, FastAPI
+Database
+PostgreSQL hoặc MySQL
+AI
+OpenAI, Gemini hoặc AI API tương đương
+Frontend
+React
+
+--- PAGE 2 ---
+Synthetic sample - for technical assessment only
+Page 2
+Yêu cầu bài làm
+Ứng viên tự nghiên cứu và quyết định:
+• Những thông tin cần lấy từ từng loại chứng từ.
+• Những thông tin cần được đối chiếu.
+• Các trường hợp cần cảnh báo.
+• Cách đánh giá kết quả kiểm tra.
+• Cách xử lý các trường hợp dữ liệu khác nhau giữa các chứng từ.
+• Cách thiết kế và tổ chức hệ thống.
+Không cung cấp trước schema extraction hoặc danh sách validation rule.
+Deliverables
+Nộp Git repository bao gồm:
+• Source code.
+• README.md.
+• `.env.example`.
+README cần có đủ thông tin để setup và chạy project. Không commit API key, password hoặc secret
+vào repository.
+Evaluation
+Tiêu chí
+Điểm
+Khả năng phân tích nghiệp vụ
+15
+Document Extraction
+20
+Cross-document Validation / Risk Detection
+20
+Solution / Architecture
+15
+AI Integration
+10
+Code Quality / Maintainability
+10
+Performance / Optimization
+5
+Database / Documentation / UI
+5
+Tổng
+100
+Bài làm không được đánh giá dựa trên số lượng công nghệ hoặc số lượng chức năng được thêm vào.
+Trọng tâm là khả năng phân tích vấn đề, chất lượng solution, độ chính xác và khả năng giải thích các
+quyết định kỹ thuật.
+Dữ liệu đầu vào
+Ứng viên sử dụng bộ chứng từ mẫu được cung cấp kèm đề bài. Các chứng từ là dữ liệu synthetic phục
+vụ tuyển dụng và không đại diện cho giao dịch thực tế.
