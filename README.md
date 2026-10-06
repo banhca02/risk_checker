@@ -163,15 +163,6 @@ Vite đã cấu hình proxy `/api` sang `127.0.0.1:8000`, nên **không cần c�
 > Lưu ý: `DATABASE_URL` dùng scheme `postgresql+psycopg` (driver psycopg 3).
 > Nếu dùng `postgresql+psycopg2` thì cần cài `psycopg2-binary` thay vì `psycopg`.
 
-### Golden test (không cần DB / không cần AI)
-
-```bash
-python tests/golden_check.py
-```
-
-Script tự dựng dữ liệu trích xuất đúng như bộ `samples/` và khẳng định đúng
-kết quả kỳ vọng (xem mục 8).
-
 ---
 
 ## 5. Hướng dẫn sử dụng
@@ -302,25 +293,7 @@ Bộ `samples/` cố tình chứa 4 lỗi seeded:
 
 ---
 
-## 8. Golden test
-
-```bash
-python tests/golden_check.py
-```
-
-`tests/golden_check.py` dựng lại đúng dữ liệu trích xuất của bộ mẫu và khẳng định:
-
-- `R03`, `R08`, `R09` → `HIGH/FAIL`; `R04` → `MEDIUM/REVIEW`;
-- `R01`, `R02`, `R05`–`R07`, `R10`–`R17`, `R19`–`R23`, `R26` → `PASS`;
-- `R18`, `R25` → **skip** (CI không có gross/dòng, PL không có measurement);
-- `R24` đúng 2 quan hệ `PASS` (REL-3 đã bị loại theo quyết định);
-- `summary = {FAIL: 3, REVIEW: 1}` và `risk_level = HIGH`.
-
-Output mong đợi: `OK — 28 findings, summary={'FAIL': 3, 'REVIEW': 1, 'PASS': 24}, risk=HIGH`.
-
----
-
-## 9. Schema database
+## 8. Schema database
 
 | Bảng | Mô tả |
 |---|---|
@@ -340,7 +313,7 @@ tiền gọi LLM lần nữa. `audit_runs` giữ lại từng lần, kèm
 
 ---
 
-## 10. Quyết định thiết kế
+## 9. Quyết định thiết kế
 
 **Tách LLM khỏi logic kiểm tra.** LLM chỉ trả về JSON có cấu trúc; việc so
 số, so tên, so container... do code tất định thực hiện — kết quả tái lập và
@@ -366,7 +339,7 @@ fallback theo `seal_no` — để lỗi sai số container (R09) không làm h�
 
 ---
 
-## 11. Hạn chế đã biết
+## 10. Hạn chế đã biết
 
 - Chưa hỗ trợ ảnh (JPG/PNG) dù đề bài cho phép; `document_reader` mới nhận PDF/TXT/MD.
 - OCR cần cài thêm Tesseract ở mức hệ điều hành, không chỉ cài `pytesseract`.
